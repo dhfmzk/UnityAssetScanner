@@ -1,5 +1,5 @@
 # UnityAssetScanner
-<img src="https://github.com/rlatkdgus500/UnityAssetScanner/blob/master/Log.png" align=“center” width=256 height=256 />
+<img src="https://github.com/rlatkdgus500/UnityAssetScanner/blob/master/Logo.png" align=“center” width=256 height=256 />
 
 Tool for Finding reference & Show asset dependency in unity asset
 
