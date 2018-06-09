@@ -11,7 +11,7 @@ namespace OrcaAssistTools {
 
     public partial class AssetScannerWindow {
         private void DrawEditorFinder() {
-            // Get target object GUID]
+            // Get target object GUID
 
             // Button for start researching
             if (GUILayout.Button("Find it!")) {

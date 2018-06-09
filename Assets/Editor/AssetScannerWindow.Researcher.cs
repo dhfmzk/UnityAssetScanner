@@ -10,18 +10,18 @@ using Object = UnityEngine.Object;
 namespace OrcaAssistTools {
     public partial class AssetScannerWindow {
 
-        private List<ScanResultInfo> ResearchedResult = new List<ScanResultInfo>();
+        private List<ScanResultInfo> _researchedResult = new List<ScanResultInfo>();
         private void DrawEditorResearcher() {
             // Get target object guid
             string[] targetGuids = DisplayLayoutGetTargetAsset();
 
             // Button for start researching
             if (GUILayout.Button("Research it!")) {
-                worker.ResearchReference(targetGuids, ref ResearchedResult);
+                _worker.ResearchReference(targetGuids, ref _researchedResult);
             }
 
-            foreach(ScanResultInfo info in ResearchedResult) {
-                Debug.Log(info.rootObject);
+            foreach(ScanResultInfo info in _researchedResult) {
+                Debug.Log(info.RootObject);
             }
             // Draw result
             DrawResearchResultWindow();
