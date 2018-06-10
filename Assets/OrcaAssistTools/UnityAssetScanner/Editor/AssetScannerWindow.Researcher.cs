@@ -20,9 +20,6 @@ namespace OrcaAssistTools {
                 _worker.ResearchReference(targetGuids, ref _researchedResult);
             }
 
-            foreach(ScanResultInfo info in _researchedResult) {
-                Debug.Log(info.RootObject);
-            }
             // Draw result
             DrawResearchResultWindow();
         }
@@ -31,7 +28,7 @@ namespace OrcaAssistTools {
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
 
             foreach (ScanResultInfo element in _researchedResult) {
-                element.DrawEditorUi();
+                element.DrawEditor();
             }
 
             GUILayout.EndScrollView();

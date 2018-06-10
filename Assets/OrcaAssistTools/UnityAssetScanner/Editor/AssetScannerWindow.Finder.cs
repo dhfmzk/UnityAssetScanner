@@ -25,7 +25,7 @@ namespace OrcaAssistTools {
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
 
             foreach(ScanResultInfo element in _researchedResult) {
-                element.DrawEditorUi();
+                element.DrawEditor();
             }
 
             GUILayout.EndScrollView();
