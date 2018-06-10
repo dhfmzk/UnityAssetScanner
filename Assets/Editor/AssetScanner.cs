@@ -75,6 +75,10 @@ namespace OrcaAssistTools {
             hashCode = hashCode * -1521134295 + EqualityComparer<List<KeyValuePair<Object, int>>>.Default.GetHashCode(ResultList);
             return hashCode;
         }
+
+        public void DrawEditorUi() {
+            // Draw Self
+        }
     }
     
 }

@@ -15,7 +15,6 @@ namespace OrcaAssistTools {
 
             // Button for start researching
             if (GUILayout.Button("Find it!")) {
-                // worker.FindReference(targetGuid, ref ResearchedDict);
             }
 
             // Draw result
@@ -23,7 +22,13 @@ namespace OrcaAssistTools {
         }
 
         private void DrawFindResultWindow() {
+            _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
 
+            foreach(ScanResultInfo element in _researchedResult) {
+                element.DrawEditorUi();
+            }
+
+            GUILayout.EndScrollView();
         }
 	}
 
