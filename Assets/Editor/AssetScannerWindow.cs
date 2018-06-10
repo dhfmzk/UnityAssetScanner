@@ -24,7 +24,7 @@ namespace OrcaAssistTools {
 
         private readonly AssetScanner _worker = new AssetScanner();
 
-        [MenuItem("OrcaAssist/Reference Finder")]
+        [MenuItem("OrcaAssist/Asset Scanner")]
         private static void Init() {
             GetWindow(typeof(AssetScannerWindow), false, "Asset Scanner");
         }
