@@ -11,6 +11,7 @@ namespace OrcaAssistTools {
     public partial class AssetScannerWindow {
 
         private List<ScanResultInfo> _researchedResult = new List<ScanResultInfo>();
+        private Rect _researchWindowRect;
         private void DrawEditorResearcher() {
             // Get target object guid
             string[] targetGuids = DisplayLayoutGetTargetAsset();
@@ -20,17 +21,15 @@ namespace OrcaAssistTools {
                 _worker.ResearchReference(targetGuids, ref _researchedResult);
             }
 
-            // Draw result
             DrawResearchResultWindow();
         }
 
         private void DrawResearchResultWindow() {
+            
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
-
             foreach (ScanResultInfo element in _researchedResult) {
                 element.DrawEditor();
             }
-
             GUILayout.EndScrollView();
         }
     }

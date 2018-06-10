@@ -33,13 +33,13 @@ namespace OrcaAssistTools {
             return hashCode;
         }
 
-        private bool _isOpen = true;
+        private bool _isOpen = false;
         public void DrawEditor() {
             _isOpen = EditorGUILayout.Foldout(_isOpen, RootObject.name);
             if (!_isOpen) return;
             
             foreach (KeyValuePair<Object, int> objectinfoKeyValuePair in ResultList) {
-                EditorGUILayout.LabelField(objectinfoKeyValuePair.Key.name);
+                EditorGUILayout.LabelField(objectinfoKeyValuePair.Value + " - " + objectinfoKeyValuePair.Key.name);
             }
         }
     }
