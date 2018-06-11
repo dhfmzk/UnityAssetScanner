@@ -75,7 +75,7 @@ namespace OrcaAssistTools {
 	    }
 
 	    private void DrawBody(int item) {
-	        switch(_guiSelectedTerm) {
+	        switch(item) {
 	            case (int)ToolType.Finder:
 	                DrawEditorFinder();
 	                break;
